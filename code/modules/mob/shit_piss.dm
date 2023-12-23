@@ -169,6 +169,11 @@
 	if(bladder <= 0)
 		bladder = 0
 
+	if(bowels >= 0) //if you want to reenable piss and shit just delete These
+		bowels = 0
+	if(bladder >= 0) //these two if statements are the load-bearing code that removes pissing and shitting. 
+		bladder = 0 //there's probably a way to cut down on lines of code and make this into a single "if not 0" statement but it'd be harder to revert and i don't care
+
 	if(has_quirk(/datum/quirk/no_bathroom))//You'll never have to use the restroom now.
 		bladder = 0
 		bowels = 0
